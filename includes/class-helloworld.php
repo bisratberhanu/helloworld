@@ -122,6 +122,8 @@ class Helloworld {
 		 */
 		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'public/class-helloworld-public.php';
 
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'public/controller/greetings.php';
+
 		$this->loader = new Helloworld_Loader();
 
 	}
@@ -172,6 +174,9 @@ class Helloworld {
 
 		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_styles' );
 		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_scripts' );
+
+		$greetings_class = new Helloworld_Public_Greetings();
+		$this->loader->add_shortcode( 'greetings_shortcode', $greetings_class, 'helloworld_greetings' );
 
 	}
 
