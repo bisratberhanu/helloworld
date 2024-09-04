@@ -177,6 +177,7 @@ class Helloworld {
 
 		$greetings_class = new Helloworld_Public_Greetings();
 		$this->loader->add_shortcode( 'greetings_shortcode', $greetings_class, 'helloworld_greetings' );
+		$this->loader->add_shortcode( 'adder_shortcode', $greetings_class, 'helloworld_adder' );
 
 	}
 
