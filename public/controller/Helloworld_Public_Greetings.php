@@ -20,7 +20,9 @@
  * @subpackage Helloworld/public
  * @author     bisrat <bisratbnegus@gmail.com>
  */
-class Helloworld_Public_Greetings {
+namespace Helloworld_Public_Greetings;
+
+class Helloworld_Public_Greetings{
 
     public function helloworld_greetings(){
         ob_start();

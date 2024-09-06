@@ -27,6 +27,8 @@
  * @subpackage Helloworld/includes
  * @author     bisrat <bisratbnegus@gmail.com>
  */
+use Helloworld_Public_Greetings\Helloworld_Public_Greetings;
+
 class Helloworld {
 
 	/**
@@ -122,7 +124,7 @@ class Helloworld {
 		 */
 		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'public/class-helloworld-public.php';
 
-		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'public/controller/greetings.php';
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'public/controller/Helloworld_Public_Greetings.php';
 
 		$this->loader = new Helloworld_Loader();
 
